@@ -3,14 +3,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import {NgxMaskModule}  from 'ngx-mask';
+import { FormularioComponent } from './cadastro/formulario/formulario.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FormularioComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxMaskModule.forRoot({
+      dropSpecialCharacters:false
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
