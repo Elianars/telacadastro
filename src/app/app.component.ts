@@ -15,6 +15,7 @@ export class AppComponent {
   consultaCep(cep:any,form:Form){
     this.cepsService.buscar(cep).subscribe((dados) => this.populaForm({ dados, form }));
   }
+  
 
     populaForm({ dados, form }: { dados: any; form: any; }){
      form.setValue({

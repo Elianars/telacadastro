@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import {NgxMaskModule}  from 'ngx-mask';
 import { FormularioComponent } from './cadastro/formulario/formulario.component';
 import { FormsModule } from '@angular/forms';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
+// :
 
 @NgModule({
   declarations: [
@@ -17,6 +21,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    MatToolbarModule,
+    MatFormFieldModule,
     NgxMaskModule.forRoot({
       dropSpecialCharacters:false
     })
