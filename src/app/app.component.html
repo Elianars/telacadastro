@@ -5,39 +5,37 @@
   
   
   <form #f="ngForm">
-    <fieldset>
-      <legend>Dados pessoais </legend><br>
-      <label for="nome" class="required">Nome Completo </label><br>
-      <input type="text" name="nome" id="nome" required placeholder="Nome Completo"><br>
-      <label for="cpf" class="required">CPF</label><br>
-      <input type="text" name="cpf" id="cpf" required placeholder="111.111.111.11" mask="000.000.000.00"><br>
-  
-      <label for="cpf" class="required">CNPJ</label><br>
-      <input type="text" name="cpf" id="cpf" required placeholder="11.111.111./0001-11git" mask="XX. XXX. XXX/0001-XX"><br>
-  
-      <label for="date" class="required">Data de nascimento</label><br>
-      <input type="date" name="data" id="data" required><br>
-      <label for="telefone">Telefone</label><br>
-      <input type="tel" name="telefone" id="telefone" placeholder="(11) 1111-1111" mask="(11)1111-1111"><br>
-      <label for="celular">Celular</label><br>
-      <input type="tel" name="celular" id="celular" placeholder="(11) 11111-1111" mask="(11)11111-1111"><br>
-      <label for="email" class="required">E-mail</label><br>
-      <input type="email" name="email" id="email"  ngModel #email="ngModel"(blur)="consultaCep(cep.value , f)"
-       required placeholder="nome@dominio.com.br"><br>
-  
-  <div>
+     
+  <div class="Form-group">
         <br><br>
+      <label for="nome" class="required">Nome Completo </label><br>
+      <input  class="input" type="text" name="nome" id="nome" required placeholder= "Nome Completo"><br>
+      
+      <label for="nome" class="required">CPF/CNPJ </label><br>
+      <input class="input" mask="000.000.000-00||00.000.000/0000-00" required placeholder="111.111.111-11/XX.XXX.XXX./0001-XX"/>
+      <br><br>
+    
+      <label for="email" class="required" >Email</label><br>
+      <input  type="email" class="Form-control" placeholder="Informe o email"         
+       required name="email">
+       <br><br>
+       <label for="telefone" class="required">Telefone</label><br>
+        <input  type="text" class="Form-control" placeholder="Informe o telefone"  
+         required  placeholder="(DDD) xxxx-xxxx">
+       <br><br>
       <label for="cep">CEP:</label><br>
       <!-- <input type="text" class="Form-control" id="cep" name="cep" ngModel  #cep="ngModel" (blur)="consultaCep($event.target.value, f)"> -->
-      <input type="text" class="Form-control" id="cep" name="cep" ngModel #cep="ngModel"(blur)="consultaCep(cep.value , f)">
-  
+      <input  type="text" class="Form-control" id="cep" name="cep" ngModel #cep="ngModel"(blur)="consultaCep(cep.value , f)">
       <br><br>
+    
       <label for="logradouro">LOGRADOURO</label><br>
       <input type="text" class="Form-control" id="logradouro" name="logradouro" ngModel #logradouro="ngModel" placeholder="..." disabled>
-   
+      <br><br>
+      <label for="numero">NUMERO</label><br>
+      <input type="text" class="Form-control" id="numero" name="numero">
       <br><br>
       <label for="bairro">BAIRRO</label><br>
-      <input type="text" class="Form-control" id="bairro" name="bairro" ngModel #bairro="ngModel" placeholder="..." disabled>
+      <input  type="text" class="Form-control" id="bairro" name="bairro" ngModel #bairro="ngModel" placeholder="..." disabled>
    
       <br><br>
       <label for="cidade">CIDADE</label><br>
@@ -45,12 +43,13 @@
    
       <br><br>
       <label for="uf">UF</label><br>
-      <input type="text" class="Form-control" id="uf" name="uf" ngModel #uf="ngModel" placeholder="..." disabled>
-   
+      <input  type="text" class="Form-control" id="uf" name="uf" ngModel #uf="ngModel" placeholder="..." disabled>
+   <br><br>
+   <Button>SALVAR</Button>
     </div>
-  </fieldset>
+  
     </form>
   
   
-  <router-outlet></router-outlet>
+  <!-- <router-outlet></router-outlet> -->
   

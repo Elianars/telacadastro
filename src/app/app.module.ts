@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import {NgxMaskModule}  from 'ngx-mask';
 import { FormularioComponent } from './cadastro/formulario/formulario.component';
 import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
